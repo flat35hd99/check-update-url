@@ -19,7 +19,7 @@ def has_been_updated():
     # ファイルがない場合、現在のコンテンツを書き込み、
     # 更新がなかったとして返す。
     if not os.path.isfile(filename):
-        with open(filename, mode="w") as f:
+        with open(filename, mode="wb") as f:
             f.write(present_data)
         return False
 
